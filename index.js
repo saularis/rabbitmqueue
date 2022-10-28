@@ -1,4 +1,4 @@
-const {RMQueue} = require('./RMQueue');
+const {RMQueue} = require('./src/RMQueue');
 
 const init = (url, consumers) => {
     const rmqueue = new RMQueue(url, consumers);
