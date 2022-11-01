@@ -12,7 +12,7 @@ npm i rabbitmqueue
 ## Queue Daemon
 Create a js file on the root directory of your project. Let's call it `rmq.js`.
 ```js
-const rabbitmqueue = require('@saularis/rabbitmqueue');
+const rabbitmqueue = require('rabbitmqueue');
 
 const consumers = {
     'default': function (data) {
@@ -35,7 +35,7 @@ node rmq.js
 ## Producer in action
 Here's how to push messages to queue.
 ```js
-const rabbitmqueue = require('@saularis/rabbitmqueue');
+const rabbitmqueue = require('rabbitmqueue');
 
 const producer = rabbitmqueue.producer("amqp://localhost", ['default']);
 
