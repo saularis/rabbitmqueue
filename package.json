@@ -10,7 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/saularis/rabbitmqueue.git"
   },
-  "keywords": [],
+  "keywords": [
+    "queue",
+    "rabbitmq",
+    "consumer",
+    "producer"
+  ],
   "author": "Abdulla Malik <hi@abdulla.dev>",
   "license": "ISC",
   "bugs": {
