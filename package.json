@@ -1,6 +1,6 @@
 {
   "name": "rabbitmqueue",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "producer"
   ],
   "author": "Abdulla Malik <hi@abdulla.dev>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/saularis/rabbitmqueue/issues"
   },
