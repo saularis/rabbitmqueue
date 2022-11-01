@@ -6,7 +6,7 @@ Install and start rabbitmq. Here's the link to download and installation [guide]
 
 ## Installation
 ```properties
-npm install @saularis/rabbitmqueue
+npm i rabbitmqueue
 ```
 
 ## Queue Daemon
