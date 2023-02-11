@@ -31,10 +31,10 @@ class RMQueue
         let { channel } = await this.connect();
         let queues = this.queues;
         for(let queue in queues){
-            await channel.consume(queue, (data) => {
+            await channel.consume(queue, async (data) => {
                 let content = Buffer.from(data.content).toString();
-                queues[queue](JSON.parse(content));
-                channel.ack(data);
+                await queues[queue](JSON.parse(content));
+                await channel.ack(data);
             });
         }
     }
