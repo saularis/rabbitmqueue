@@ -1,5 +1,5 @@
 # RabbitMQueue
-A simple queue for jobs made using rabbitmq.
+Simple queueing package for task queueing using rabbitmq
 
 ## Prerequisite
 Install and start rabbitmq. Here's the link to download and installation [guide](https://www.rabbitmq.com/download.html).
