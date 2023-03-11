@@ -10,11 +10,24 @@ class RMQueue
     constructor(url, queues){
         this.url = url;
         this.queues = queues;
+        this.connection = null;
+
+        if(!this.url){
+            throw new Error("URL is required.");
+        }
+
+        if (!this.queues) {
+            throw new Error("Queues is required.");
+        }
+        
+        if(!isObject(this.queues) && !isArray(this.queues)){
+            throw new Error("Queues must be an object or array.");
+        }
     }
 
     async connect(){
-        let connection = await amqplib.connect(this.url);
-        let channel    = await connection.createChannel();
+        this.connection = await amqplib.connect(this.url);
+        let channel    = await this.connection.createChannel();
         let queues = this.getQueueNames();
         
         for(let queue in queues){
@@ -22,7 +35,7 @@ class RMQueue
         }
 
         return {
-            connection: connection,
+            connection: this.connection,
             channel: channel
         };
     }
@@ -56,6 +69,10 @@ class RMQueue
         }
 
         throw new Error("Invalid queue type. Must be object or array.");
+    }
+
+    async closeConnection(){
+        await this.connection.close();
     }
 }
 
