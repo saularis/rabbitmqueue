@@ -1,4 +1,6 @@
 # RabbitMQueue
+[![Node.js CI](https://github.com/saularis/rabbitmqueue/actions/workflows/node.js.yml/badge.svg)](https://github.com/saularis/rabbitmqueue/actions/workflows/node.js.yml)
+
 Simple queueing package for task queueing using rabbitmq
 
 ## Prerequisite
